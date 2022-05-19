@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - numpy
+    </py-env>
+    
+    <title>Hello PyScript</title>
+</head>
+<body>
+    <py-script>
+        print('Hello PyScript')
+
+        def hello():
+            return 'Hello PyScript from a function'
+
+        hello()
+    </py-script>
+
+    <py-script src="index.py"></py-script>
+
+    <py-script>
+        # Standard Python Libraries
+        import math
+
+        squares = [math.sqrt(i) for i in [4,16,36,64]]
+        print(squares)
+    </py-script>
+
+    <py-script>
+        # External Supported Libraries
+        import numpy as np
+
+        arr = np.array([2,4,6,8])
+        print("Square Value of arr : ", np.square(arr))
+    </py-script>
+
+    <py-script>
+        print("Interactive Shell;")
+    </py-script>
+
+    <py-repl> </py-repl>
+</body>
+</html>
